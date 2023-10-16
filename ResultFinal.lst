@@ -1,0 +1,1706 @@
+SQL> @0Tables.sql
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+       ITEMID   NUMOFCOPIES      PRICE                                                              
+------------- ------------- ----------                                                              
+            1            17         15                                                              
+            2            16      12.49                                                              
+            3            10      25.25                                                              
+            4            20      14.75                                                              
+            5            21       9.99                                                              
+            6            31       7.99                                                              
+            7            33      13.99                                                              
+            8            35      11.99                                                              
+
+8 rows selected.
+
+
+TITLE                PUBLISHED        ITEMID                                                        
+-------------------- --------- -------------                                                        
+Pokemon              08-AUG-97             1                                                        
+Yu-Gi-Oh             30-SEP-96             2                                                        
+Star Wars            12-APR-77             3                                                        
+Spider Man           01-AUG-62             4                                                        
+
+
+STUDIONAME           TITLE                DESCRIPTION                           ITEMID              
+-------------------- -------------------- ------------------------------ -------------              
+DC                   Robin                Robin the main lead.                       5              
+WaltDisney           Maleficent           She is evil fairy.                         6              
+Sony Pic             Spider Man           Peter struggles with power.                7              
+Paramount            KungFu               KungFu Panda a Legend.                     8              
+
+
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            1 Rima Modak           rimamodak@yahoo.com            El Camino                         
+regular                                                                                             
+                                                                                                    
+            2 Bob Bato             bobbyb@gmail.com               30th Ave                          
+regular                                                                                             
+                                                                                                    
+            3 Nick Carrey           ncarrey@yahoo.com             Mission St                        
+gold       01-JAN-19          3                                                                     
+                                                                                                    
+
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            4 Billy Heyward        thekid@gmail.com               Twins Ave                         
+gold       15-OCT-21          5                                                                     
+                                                                                                    
+            5 Lou Collins          loucfb@gmail.com               Jen St                            
+gold       01-SEP-20         10                                                                     
+                                                                                                    
+            6 Chris Lamont         clamont@gmail.com              Hamilton Ct                       
+regular                                                                                             
+                                                                                                    
+
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            7 John Coi              coijohn@yahoo.com             Flat St                           
+gold       10-JAN-17         15                                                                     
+                                                                                                    
+            8 Mike Rai             raimike@gmail.com              Elvis Ave                         
+gold       05-OCT-22         20                                                                     
+                                                                                                    
+            9 Voi Patt             pattvoi@gmail.com              James St                          
+gold       15-SEP-21         25                                                                     
+                                                                                                    
+
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+           10 Javes Broi           broijaves@gmail.com            Hill St                           
+regular                                                                                             
+                                                                                                    
+
+10 rows selected.
+
+SQL> @1check_quantity.sql
+                                                                         
+Table altered.
+
+
+Trigger created.
+
+No errors.
+SQL> @2shipping_date_check.sql
+
+Table altered.
+
+Trigger created.
+
+No errors.
+SQL> 
+SQL> @3createOrderLineItem.sql
+
+Procedure created.
+
+No errors.
+SQL> 
+SQL> @4custType_after_update.sql
+
+Trigger created.
+
+No errors.
+SQL> 
+SQL> @5setShippingDate.sql
+
+Procedure created.
+
+No errors.
+SQL> 
+SQL> @6computeTotal.sql
+
+Function created.
+
+No errors.
+SQL> 
+SQL> @7showItemOrders.sql
+
+Procedure created.
+
+No errors.
+SQL> 
+SQL> 
+SQL> start Report.sql
+SQL> 
+SQL> 
+SQL> REM ** set formatting commands ...
+SQL> TTITLE CENTER "Master Robot Sales Management System" SKIP 1 -
+> 	  CENTER "Report of a Customer Order " SKIP 3 -
+> 	  CENTER "Rima Modak " SKIP 2 -
+> 
+SQL> BTITLE RIGHT "=======================================================" SKIP 1 -
+> 	 CENTER "Rima Modak" -
+> 	 RIGHT "Page" FORMAT 999 SQL.PNO skip 1
+SQL> 
+SQL> // show heading. If you don't need it, set it off
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            1 Rima Modak           rimamodak@yahoo.com            El Camino                         
+                                             =======================================================
+                                             Rima Modak                                     Page   1
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page   2
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page   3
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            2 Bob Bato             bobbyb@gmail.com               30th Ave                          
+                                             =======================================================
+                                             Rima Modak                                     Page   4
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page   5
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page   6
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            3 Nick Carrey           ncarrey@yahoo.com             Mission St                        
+                                             =======================================================
+                                             Rima Modak                                     Page   7
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       01-JAN-19          3                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page   8
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page   9
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            4 Billy Heyward        thekid@gmail.com               Twins Ave                         
+                                             =======================================================
+                                             Rima Modak                                     Page  10
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       15-OCT-21          5                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  11
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  12
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            5 Lou Collins          loucfb@gmail.com               Jen St                            
+                                             =======================================================
+                                             Rima Modak                                     Page  13
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       01-SEP-20         10                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  14
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  15
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            6 Chris Lamont         clamont@gmail.com              Hamilton Ct                       
+                                             =======================================================
+                                             Rima Modak                                     Page  16
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page  17
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  18
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            7 John Coi              coijohn@yahoo.com             Flat St                           
+                                             =======================================================
+                                             Rima Modak                                     Page  19
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       10-JAN-17         15                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  20
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  21
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            8 Mike Rai             raimike@gmail.com              Elvis Ave                         
+                                             =======================================================
+                                             Rima Modak                                     Page  22
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       05-OCT-22         20                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  23
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  24
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            9 Voi Patt             pattvoi@gmail.com              James St                          
+                                             =======================================================
+                                             Rima Modak                                     Page  25
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       15-SEP-21         25                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  26
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  27
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+           10 Javes Broi           broijaves@gmail.com            Hill St                           
+                                             =======================================================
+                                             Rima Modak                                     Page  28
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page  29
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  30
+
+10 rows selected.
+
+SQL> SET HEADING ON
+SQL> // the size of one page
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            1 Rima Modak           rimamodak@yahoo.com            El Camino                         
+                                             =======================================================
+                                             Rima Modak                                     Page   1
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page   2
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page   3
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            2 Bob Bato             bobbyb@gmail.com               30th Ave                          
+                                             =======================================================
+                                             Rima Modak                                     Page   4
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page   5
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page   6
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            3 Nick Carrey           ncarrey@yahoo.com             Mission St                        
+                                             =======================================================
+                                             Rima Modak                                     Page   7
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       01-JAN-19          3                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page   8
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page   9
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            4 Billy Heyward        thekid@gmail.com               Twins Ave                         
+                                             =======================================================
+                                             Rima Modak                                     Page  10
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       15-OCT-21          5                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  11
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  12
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            5 Lou Collins          loucfb@gmail.com               Jen St                            
+                                             =======================================================
+                                             Rima Modak                                     Page  13
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       01-SEP-20         10                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  14
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  15
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            6 Chris Lamont         clamont@gmail.com              Hamilton Ct                       
+                                             =======================================================
+                                             Rima Modak                                     Page  16
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page  17
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  18
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            7 John Coi              coijohn@yahoo.com             Flat St                           
+                                             =======================================================
+                                             Rima Modak                                     Page  19
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       10-JAN-17         15                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  20
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  21
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            8 Mike Rai             raimike@gmail.com              Elvis Ave                         
+                                             =======================================================
+                                             Rima Modak                                     Page  22
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       05-OCT-22         20                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  23
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  24
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            9 Voi Patt             pattvoi@gmail.com              James St                          
+                                             =======================================================
+                                             Rima Modak                                     Page  25
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+gold       15-SEP-21         25                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page  26
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  27
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+           10 Javes Broi           broijaves@gmail.com            Hill St                           
+                                             =======================================================
+                                             Rima Modak                                     Page  28
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+regular                                                                                             
+                                             =======================================================
+                                             Rima Modak                                     Page  29
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+                                             =======================================================
+                                             Rima Modak                                     Page  30
+
+10 rows selected.
+
+SQL> SET PAGESIZE 33
+SQL> // the size of each row
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+            1 Rima Modak           rimamodak@yahoo.com            El Camino                         
+regular                                                                                             
+                                                                                                    
+            2 Bob Bato             bobbyb@gmail.com               30th Ave                          
+regular                                                                                             
+                                                                                                    
+            3 Nick Carrey           ncarrey@yahoo.com             Mission St                        
+gold       01-JAN-19          3                                                                     
+                                                                                                    
+            4 Billy Heyward        thekid@gmail.com               Twins Ave                         
+gold       15-OCT-21          5                                                                     
+                                                                                                    
+            5 Lou Collins          loucfb@gmail.com               Jen St                            
+gold       01-SEP-20         10                                                                     
+                                                                                                    
+            6 Chris Lamont         clamont@gmail.com              Hamilton Ct                       
+regular                                                                                             
+                                                                                                    
+            7 John Coi              coijohn@yahoo.com             Flat St                           
+gold       10-JAN-17         15                                                                     
+                                             =======================================================
+                                             Rima Modak                                     Page   1
+
+                                Master Robot Sales Management System                                
+                                     Report of a Customer Order                                     
+                                                                                                    
+                                                                                                    
+                                             Rima Modak                                             
+                                                                                                    
+       CUSTID NAME                 EMAIL                          ADDRESS                           
+------------- -------------------- ------------------------------ ------------------------------    
+CUSTTYPE   DATEJOINE     COUPON                                                                     
+---------- --------- ----------                                                                     
+                                                                                                    
+            8 Mike Rai             raimike@gmail.com              Elvis Ave                         
+gold       05-OCT-22         20                                                                     
+                                                                                                    
+            9 Voi Patt             pattvoi@gmail.com              James St                          
+gold       15-SEP-21         25                                                                     
+                                                                                                    
+           10 Javes Broi           broijaves@gmail.com            Hill St                           
+regular                                                                                             
+                                                                                                    
+
+
+
+
+
+
+
+
+
+
+                                             =======================================================
+                                             Rima Modak                                     Page   2
+
+10 rows selected.
+
+SQL> SET LINESIZE 55
+SQL> // show feedback, in the result "21 rows select.". If you don't need it, set it off
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+            1 Rima Modak                               
+rimamodak@yahoo.com                                    
+El Camino                      regular                 
+                                                       
+                                                       
+            2 Bob Bato                                 
+bobbyb@gmail.com                                       
+30th Ave                       regular                 
+                                                       
+                                                       
+            3 Nick Carrey                              
+ ncarrey@yahoo.com                                     
+Mission St                     gold       01-JAN-19    
+         3                                             
+                                                       
+            4 Billy Heyward                            
+=======================================================
+                       Rima Modak              Page   1
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+thekid@gmail.com                                       
+Twins Ave                      gold       15-OCT-21    
+         5                                             
+                                                       
+            5 Lou Collins                              
+loucfb@gmail.com                                       
+Jen St                         gold       01-SEP-20    
+        10                                             
+                                                       
+            6 Chris Lamont                             
+clamont@gmail.com                                      
+Hamilton Ct                    regular                 
+                                                       
+                                                       
+            7 John Coi                                 
+ coijohn@yahoo.com                                     
+=======================================================
+                       Rima Modak              Page   2
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+Flat St                        gold       10-JAN-17    
+        15                                             
+                                                       
+            8 Mike Rai                                 
+raimike@gmail.com                                      
+Elvis Ave                      gold       05-OCT-22    
+        20                                             
+                                                       
+            9 Voi Patt                                 
+pattvoi@gmail.com                                      
+James St                       gold       15-SEP-21    
+        25                                             
+                                                       
+           10 Javes Broi                               
+broijaves@gmail.com                                    
+Hill St                        regular                 
+=======================================================
+                       Rima Modak              Page   3
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+                                                       
+                                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================
+                       Rima Modak              Page   4
+
+10 rows selected.
+
+SQL> SET FEEDBACK ON
+SQL> //SET RECSEP {WR[APPED] | EA[CH] | OFF}. WR:print a record separator only when a line wraps. This is the default setting. EA: print a record separator after each record.
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+            1 Rima Modak                               
+rimamodak@yahoo.com                                    
+El Camino                      regular                 
+                                                       
+                                                       
+            2 Bob Bato                                 
+bobbyb@gmail.com                                       
+30th Ave                       regular                 
+                                                       
+                                                       
+            3 Nick Carrey                              
+ ncarrey@yahoo.com                                     
+Mission St                     gold       01-JAN-19    
+         3                                             
+                                                       
+            4 Billy Heyward                            
+=======================================================
+                       Rima Modak              Page   1
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+thekid@gmail.com                                       
+Twins Ave                      gold       15-OCT-21    
+         5                                             
+                                                       
+            5 Lou Collins                              
+loucfb@gmail.com                                       
+Jen St                         gold       01-SEP-20    
+        10                                             
+                                                       
+            6 Chris Lamont                             
+clamont@gmail.com                                      
+Hamilton Ct                    regular                 
+                                                       
+                                                       
+            7 John Coi                                 
+ coijohn@yahoo.com                                     
+=======================================================
+                       Rima Modak              Page   2
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+Flat St                        gold       10-JAN-17    
+        15                                             
+                                                       
+            8 Mike Rai                                 
+raimike@gmail.com                                      
+Elvis Ave                      gold       05-OCT-22    
+        20                                             
+                                                       
+            9 Voi Patt                                 
+pattvoi@gmail.com                                      
+James St                       gold       15-SEP-21    
+        25                                             
+                                                       
+           10 Javes Broi                               
+broijaves@gmail.com                                    
+Hill St                        regular                 
+=======================================================
+                       Rima Modak              Page   3
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+       CUSTID NAME                                     
+------------- --------------------                     
+EMAIL                                                  
+------------------------------                         
+ADDRESS                        CUSTTYPE   DATEJOINE    
+------------------------------ ---------- ---------    
+    COUPON                                             
+----------                                             
+                                                       
+                                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================
+                       Rima Modak              Page   4
+
+10 rows selected.
+
+SQL> SET RECSEP EACH
+SQL> 
+SQL> VARIABLE grand_total NUMBER;
+SQL> VARIABLE OrderId NUMBER;
+SQL> 
+SQL> DECLARE
+  2  	a number;
+  3  	b number;
+  4  	orderid1 Customers.CustType%type;
+  5  	lineid OrderLineItem.LineId%type;
+  6  
+  7  	price1 StoreItems.price%type;
+  8  	itemid StoreItems.ItemId%type;
+  9  	quantity StoreItems.NumOfCopies%type;
+ 10  	name1 Customers.name%type;
+ 11  	custtype Customers.CustType%type;
+ 12  	email Customers.email%type;
+ 13  	address Customers.address%type;
+ 14  	custid	CustOrder.CustId%type;
+ 15  	shippingfee CustOrder.ShippingFee%type;
+ 16  	orderdate CustOrder.OrderDate%type;
+ 17  	shippingdate CustOrder.ShippedDate%type;
+ 18  	numberofitems CustOrder.NumOfItems%type;
+ 19  
+ 20  BREAK ON course_code  NODUPLICATES -
+ 21  		ON address		 NODUPLICATES
+ 22  
+ 23  REM ** Insert SELECT statement
+ 24  
+ 25  	CURSOR details is
+ 26  	 SELECT LineId,OrderId,NumOfItems,ItemId FROM OrderLineItem;
+ 27  PROCEDURE showItemOrders(orderid IN OUT number) IS
+ 28  BEGIN
+ 29  	b:=0;
+ 30  
+ 31  	select CustId into custid
+ 32  	from CustOrder
+ 33  	where OrderId=orderid;
+ 34  
+ 35   select name,email,CustType,address into name1,email,custtype,address
+ 36  	from Customers
+ 37  	where CustId=custid;
+ 38  	dbms_output.put_line('Customer ID: '||custid||'  '||'Name: '||name1||'	'||'EmailID: '||email||'  '||'Customer_type: '||custtype||'  '||'Address: '||address);
+ 39  
+ 40  	select NumOfItems,OrderDate,ShippedDate,ShippingFee into numberofitems,orderdate,shippingdate,shippingfee
+ 41  	from CustOrder
+ 42  	where OrderId=orderid;
+ 43  	dbms_output.put_line('OrderID: '||orderid||'  '||'NumberOfOrders: '||numberofitems||'	'||'DateOrdered: '||orderdate||'  '||'ShippedDate: '||shippingdate||'	 '||'Shipping Fee: '||shippingfee);
+ 44  
+ 45  	OPEN details;
+ 46  	LOOP
+ 47  	FETCH details into lineid,orderid1, quantity,itemid;
+ 48  	   EXIT WHEN details%notfound;
+ 49  	   if orderid=orderid1 then
+ 50  
+ 51  	   select price into price1
+ 52  	   from StoreItems
+ 53  	   where ItemId=itemid;
+ 54  
+ 55  	   b:=b+price1*quantity;
+ 56  	   dbms_output.put_line('Line_ID: '||lineid||'	 '||'ItemID: '||itemid||'   '||'Price: '||price1||'  '||'Quantity: '||quantity);
+ 57  	   end if;
+ 58  	   END LOOP;
+ 59  	    b:=b+shippingfee;
+ 60  	    :grand_total:=b;
+ 61  	   dbms_output.put_line('Total Bill: '|| b);
+ 62  	CLOSE details;
+ 63  END;
+ 64  
+ 65  BEGIN
+ 66  	a:=&Order_ID;
+ 67  	:OrderId:=a;
+ 68  	showItemOrders(a);
+ 69  END;
+ 70  /
+Enter value for order_id: 105
+old  66:    a:=&Order_ID;
+new  66:    a:=105;
+SQL> 
+SQL> select * from Customers where CustId in (select CustId from CustOrder where OrderId=:orderid);
+
+
+    CUSTID NAME                           EMAIL                                 
+---------- ------------------------------ ------------------------------        
+ADDRESS                                            CUSTTYPE   DATEJOINE         
+-------------------------------------------------- ---------- ---------         
+    COUPON                                                                      
+----------                                                                      
+         9 Voi Patt                       pattvoi@gmail.com                     
+James St                                           gold       15-SEP-21         
+        25                                                                      
+                                                                                
+
+SQL> 
+SQL> select *from CustOrder where OrderId=:orderid;
+
+
+   ORDERID     CUSTID ORDERDATE SHIPPEDDA SHIPPINGFEE NUMOFITEMS                
+---------- ---------- --------- --------- ----------- ----------                
+       105          9 15-OCT-22 20-OCT-22          10          3                
+
+
+SQL> 
+SQL> select *from OrderLineItem where OrderId=:orderid;
+
+
+    LINEID     ITEMID NUMOFITEMS    ORDERID                                     
+---------- ---------- ---------- ----------                                     
+         9          1          1        105                                     
+        10          5          1        105                                     
+        11          3          1        105                                     
+
+
+SQL> 
+SQL> select * from StoreItems where ItemId in (select ItemId from OrderLineItem where OrderId=:orderid);
+
+    ITEMID NUMOFCOPIES      PRICE                                               
+---------- ----------- ----------                                               
+         1          17         15                                               
+         3          10      25.25                                               
+         5          21       9.99                                               
+
+SQL> 
+SQL> select OrderLineItem.ItemId, StoreItems.price, CartoonMovie.title from ((StoreItems
+  2  INNER JOIN OrderLineItem ON StoreItems.ItemId = OrderLineItem.ItemId)
+  3  INNER JOIN CartoonMovie ON StoreItems.ItemId = CartoonMovie.ItemId)
+  4  where OrderLineItem.OrderId=:orderid;
+
+    ITEMID      PRICE TITLE                                                     
+---------- ---------- --------------------                                      
+         5       9.99 Robin                                                     
+
+SQL> select OrderLineItem.ItemId, ComicBook.title from ((StoreItems
+  2  INNER JOIN OrderLineItem ON StoreItems.ItemId = OrderLineItem.ItemId)
+  3  INNER JOIN ComicBook ON StoreItems.ItemId = ComicBook.ItemId)
+  4  where OrderLineItem.OrderId=:orderid;
+
+    ITEMID TITLE                                                                
+---------- --------------------                                                 
+         1 Pokemon                                                              
+         3 Star Wars                                                            
+
+
+SQL> 
+SQL> select OrderLineItem.NumOfItems*StoreItems.price AS SUB_TOTAL, OrderLineItem.OrderId
+  2  from OrderLineItem
+  3  INNER JOIN StoreItems ON OrderLineItem.ItemId=StoreItems.ItemId
+  4  where OrderLineItem.OrderId=:orderid;
+
+ SUB_TOTAL    ORDERID                                                           
+---------- ----------                                                           
+        15        105                                                           
+     25.25        105                                                           
+      9.99        105                                                           
+
+SQL> 
+SQL> PRINT grand_total;
+
+          Master Robot Sales Management System         
+              Report of a Customer Order               
+                                                       
+                                                       
+                      Rima Modak                       
+                                                       
+  GRAND_TOTAL                                          
+-------------                                          
+      62.75                                                 
+                                                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================
+                       Rima Modak              Page   1
+
+SQL> 
+SQL> 
+SQL> REM ** clear all formatting commands ...
+SQL> CLEAR COLUMNS
+SQL> CLEAR BREAK
+SQL> TTITLE OFF
+SQL> BTITLE OFF
+SQL> SET VERIFY OFF
+SQL> SET FEEDBACK OFF
+SQL> SET PAGESIZE 10
+SQL> SET LINESIZE 75
+SQL> SET RECSEP OFF
+SQL> SET ECHO OFF
+
+SQL> spool off
+
